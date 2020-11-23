@@ -37,11 +37,7 @@
 
 			var listID = getParameterByName('list');
 
-			if(listID==1){
-				$("#maintext").text("기계1");
-				$("#subtext").text("기계1 회사");
-				$("#contents").text("기계1 설명");
-			} else if(listID==2){
+			if(listID==2){
 				$("#maintext").text("기계2");
 				$("#subtext").text("기계2 회사");
 				$("#contents").text("기계2 설명");
@@ -53,6 +49,26 @@
 				$("#maintext").text("기계4");
 				$("#subtext").text("기계4 회사");
 				$("#contents").text("기계4 설명");
+			} else if(listID==5){
+				$("#maintext").text("기계5");
+				$("#subtext").text("기계5 회사");
+				$("#contents").text("기계5 설명");
+			} else if(listID==6){
+				$("#maintext").text("기계6");
+				$("#subtext").text("기계6 회사");
+				$("#contents").text("기계6 설명");
+			} else if(listID==7){
+				$("#maintext").text("기계7");
+				$("#subtext").text("기계7 회사");
+				$("#contents").text("기계7 설명");
+			} else if(listID==8){
+				$("#maintext").text("기계8");
+				$("#subtext").text("기계8 회사");
+				$("#contents").text("기계8 설명");
+			} else{
+				$("#maintext").text("기계1");
+				$("#subtext").text("기계1 회사");
+				$("#contents").text("기계1 설명");
 			}
 		});
 	</script>
@@ -103,10 +119,10 @@
 							<h2>기계 1~4</h2>
 						</header>
 						<ul class="style1">
-							<li><a id="list1" href="?list=1">기계1</a></li>
-							<li><a id="list2" href="?list=2">기계2</a></li>
-							<li><a id="list3" href="?list=3">기계3</a></li>
-							<li><a id="list4" href="?list=4">기계4</a></li>
+							<li><a href="?list=1">기계1</a></li>
+							<li><a href="?list=2">기계2</a></li>
+							<li><a href="?list=3">기계3</a></li>
+							<li><a href="?list=4">기계4</a></li>
 						</ul>
 					</section>
 					<section class="sidebar">
@@ -114,10 +130,10 @@
 							<h2>기계 5~8</h2>
 						</header>
 						<ul class="style1">
-							<li><a href="#">기계5</a></li>
-							<li><a href="#">기계6</a></li>
-							<li><a href="#">기계7</a></li>
-							<li><a href="#">기계8</a></li>
+							<li><a href="?list=5">기계5</a></li>
+							<li><a href="?list=6">기계6</a></li>
+							<li><a href="?list=7">기계7</a></li>
+							<li><a href="?list=8">기계8</a></li>
 						</ul>
 					</section>
 				</div>
@@ -125,23 +141,11 @@
 				<div class="9u skel-cell-important">
 					<section>
 						<header>
-							<h2 id="maintext">Integer gravida nibh quis urna</h2>
-							<span id="subtext" class="byline">Augue praesent a lacus at urna congue rutrum</span>
+							<h2 id="maintext">title</h2>
+							<span id="subtext" class="byline">subtitle</span>
 						</header>
 						<div id="contents">
-							<p>Donec condimentum, urna non molestie semper, ligula enim ornare nibh, quis laoreet eros quam eget ante. Aliquam libero. Vivamus nisl nibh, iaculis vitae, viverra sit amet, ullamcorper vitae, turpis. Aliquam erat volutpat. Vestibulum
-								dui sem, pulvinar sed, imperdiet nec, iaculis nec, leo. Fusce odio. Etiam arcu dui, faucibus eget, placerat vel, sodales eget, orci. Donec ornare neque ac sem. Mauris aliquet. Aliquam sem leo, vulputate sed, convallis at, ultricies
-								quis, justo. Donec nonummy magna quis risus. Quisque eleifend. Phasellus tempor vehicula justo. Aliquam lacinia metus ut elit. Suspendisse iaculis mauris nec lorem. Donec leo. Vivamus fermentum nibh in augue. Praesent a lacus at urna
-								congue rutrum. Nulla enim eros, porttitor eu, tempus id, varius non, nibh. Duis enim nulla, luctus eu, dapibus lacinia, venenatis id, quam. Vestibulum imperdiet, magna nec eleifend rutrum, nunc lectus vestibulum velit, euismod lacinia
-								quam nisl id lorem. Quisque erat. Vestibulum pellentesque, justo mollis pretium suscipit, justo nulla blandit libero, in blandit augue justo quis nisl.</p>
-							<p>Aliquam libero. Vivamus nisl nibh, iaculis vitae, viverra sit amet, ullamcorper vitae, turpis. Aliquam erat volutpat. Vestibulum dui sem, pulvinar sed, imperdiet nec, iaculis nec, leo. Fusce odio. Etiam arcu dui, faucibus eget,
-								placerat vel, sodales eget, orci. Donec ornare neque ac sem. Mauris aliquet. Aliquam sem leo, vulputate sed, convallis at, ultricies quis, justo. Donec nonummy magna quis risus. Quisque eleifend. Phasellus tempor vehicula justo.
-								Aliquam lacinia metus ut elit. Suspendisse iaculis mauris nec lorem. Donec leo. Vivamus fermentum nibh in augue. Praesent a lacus at urna congue rutrum. Nulla enim eros, porttitor eu, tempus id, varius non, nibh. Duis enim nulla,
-								luctus eu, dapibus lacinia, venenatis id, quam. Vestibulum imperdiet, magna nec eleifend rutrum, nunc lectus vestibulum velit, euismod lacinia quam nisl id lorem. Quisque erat. Donec condimentum, urna non molestie semper, ligula enim
-								ornare nibh, quis laoreet eros quam eget ante. Vestibulum pellentesque, justo mollis pretium suscipit, justo nulla blandit libero, in blandit augue justo quis nisl.</p>
-							<p>Donec condimentum, urna non molestie semper, ligula enim ornare nibh, quis laoreet eros quam eget ante. Aliquam libero. Vivamus nisl nibh, iaculis vitae, viverra sit amet, ullamcorper vitae, turpis. Aliquam erat volutpat. Vestibulum
-								dui sem, pulvinar sed, imperdiet nec, iaculis nec, leo. Fusce odio. Etiam arcu dui, faucibus eget, placerat vel, sodales eget, orci. Donec ornare neque ac sem. Mauris aliquet. Aliquam sem leo, vulputate sed, convallis at, ultricies
-								quis, justo. Donec nonummy magna quis risus. Quisque eleifend. Phasellus tempor vehicula justo. Aliquam lacinia metus ut elit.</p>
+							content
 					</section>
 				</div>
 			</div>
@@ -153,109 +157,9 @@
 	</div>
 	<!-- /Main -->
 
-	<!-- Featured -->
-	<!--
-		<div id="featured">
-			<div class="container">
-				<div class="row">
-					<section class="4u">
-						<div class="box">
-							<a href="#" class="image left"><img src="images/pics04.jpg" alt=""></a>
-							<h3>Etiam posuere augue</h3>
-							<p>Donec nonummy magna quis risus eleifend. </p>
-							<a href="#" class="button">More</a>
-						</div>
-					</section>
-					<section class="4u">
-						<div class="box">
-							<a href="#" class="image left"><img src="images/pics05.jpg" alt=""></a>
-							<h3>Etiam posuere augue</h3>
-							<p>Donec nonummy magna quis risus eleifend. </p>
-							<a href="#" class="button">More</a>
-						</div>
-					</section>
-					<section class="4u">
-						<div class="box">
-							<a href="#" class="image left"><img src="images/pics06.jpg" alt=""></a>
-							<h3>Etiam posuere augue</h3>
-							<p>Donec nonummy magna quis risus eleifend. </p>
-							<a href="#" class="button">More</a>
-						</div>
-					</section>
-				</div>
-				<div class="divider"></div>
-			</div>
-		</div>
-	-->
-	<!-- /Featured -->
-
-	<!-- Footer -->
-	<!--
-		<div id="footer">
-			<div class="container">
-				<div class="row">
-					<div class="3u">
-						<section>
-							<h2>Maecenas lectus</h2>
-							<div class="balloon">
-								<blockquote>&ldquo;&nbsp;&nbsp;Donec leo, vivamus ullamcorper fermentum nibh in augue pulvinar ullamcorper metus praesent a lacus at urna congue ullamcorper  rutrum.&nbsp;&nbsp;&rdquo;<br>
-									<br>
-									<strong>&ndash;&nbsp;&nbsp;John Smith</strong></blockquote>
-							</div>
-							<div class="ballon-bgbtm">&nbsp;</div>
-						</section>
-					</div>
-					<div class="3u">
-						<section>
-							<h2>Donec dictum</h2>
-							<ul class="default">
-								<li>
-									<h3>Mauris vulputate dolor sit amet</h3>
-									<p><a href="#">Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum.</a></p>
-								</li>
-								<li>
-									<h3>Fusce ultrices fringilla metus</h3>
-									<p><a href="#">Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum.</a></p>
-								</li>
-								<li>
-									<h3>Donec dictum metus in sapien</h3>
-									<p><a href="#">Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum.</a></p>
-								</li>
-							</ul>
-						</section>
-					</div>
-					<div class="3u">
-						<section>
-							<h2>Nulla leifend</h2>
-							<p>Donec placerat odio vel elit. Nullam ante orci, pellentesque eget, tempus quis, ultrices in, est. Curabitur sit amet nulla. Nam in massa. Sed vel tellus. Curabitur sem urna, consequat.</p>
-							<ul class="style5">
-								<li><a href="#"><img src="images/pics07.jpg" alt=""></a></li>
-								<li><a href="#"><img src="images/pics08.jpg" alt=""></a></li>
-								<li><a href="#"><img src="images/pics09.jpg" alt=""></a></li>
-								<li><a href="#"><img src="images/pics10.jpg" alt=""></a></li>
-								<li><a href="#"><img src="images/pics11.jpg" alt=""></a></li>
-								<li><a href="#"><img src="images/pics12.jpg" alt=""></a></li>
-							</ul>
-							<a href="#" class="button">More Collections</a>
-						</section>
-					</div>
-					<div class="3u">
-						<section>
-							<h2>Luctus eleifend</h2>
-							<p><strong>Aliquam erat volutpat. Pellentesque tristique ante ut risus. </strong></p>
-							<p>Quisque dictum. Integer nisl risus, sagittis convallis, rutrum id, elementum congue, nibh. Suspendisse dictum porta lectus. Donec placerat odio vel elit.</p>
-							<p>Donec placerat odio vel elit. Nullam ante orci, pellentesque eget, tempus quis, ultrices in, est. Curabitur sit amet nulla. Nam in massa. Sed vel tellus. Curabitur sem urna, consequat.</p>
-							<a href="#" class="button">More Collections</a>
-						</section>
-					</div>
-				</div>
-			</div>
-		</div>
-	-->
 	<!-- /Footer -->
-
-	<!-- Copyright -->
 	<div id="footers"></div>
+	<!-- /Footer -->
 
 
 </body>
