@@ -5,95 +5,213 @@
     Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 -->
 <html>
-	<head>
-		<title>SUNGMIN HIGHTECH | 회사소개</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:700italic,400,300,700' rel='stylesheet' type='text/css'>
-		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-panels.min.js"></script>
-		<script src="js/init.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel-noscript.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-desktop.css" />
-		</noscript>
-		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 
-		<script type="text/javascript">
-			$(document).ready( function() {
+<head>
+	<title>SUNGMIN HIGHTECH | 회사소개</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:700italic,400,300,700' rel='stylesheet' type='text/css'>
+	<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/skel.min.js"></script>
+	<script src="js/skel-panels.min.js"></script>
+	<script src="js/init.js"></script>
+	<noscript>
+		<link rel="stylesheet" href="css/skel-noscript.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/style-desktop.css" />
+	</noscript>
+	<link rel="stylesheet" href="css/timeline.css" />
+	<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+
+	<script type="text/javascript">
+	function getParameterByName(name) {
+		name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+		var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+			results = regex.exec(location.search);
+		return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+	}
+		$(document).ready(function() {
 			$("#footers").load("common/footer.html");
+
+			var id = getParameterByName('id');
+
+			if(id==2){
+				$("#main1").hide();
+				$("#main2").show();
+				$("#main3").hide();
+
+				$('#list1').removeClass('active');
+				$('#list2').addClass('active');
+				$('#list3').removeClass('active');
+			} else if(id==3){
+				$("#main1").hide();
+				$("#main2").hide();
+				$("#main3").show();
+
+				$('#list1').removeClass('active');
+				$('#list2').removeClass('active');
+				$('#list3').addClass('active');
+			}	else{
+				$("#main1").show();
+				$("#main2").hide();
+				$("#main3").hide();
+
+				$('#list1').addClass('active');
+				$('#list2').removeClass('active');
+				$('#list3').removeClass('active');
+			}
+
 		});
-		</script>
-	</head>
-	<body class="homepage">
+	</script>
+</head>
+
+<body class="homepage">
 
 	<!-- Header -->
-		<div id="header">
-			<div class="container">
+	<div id="header">
+		<div class="container">
 
-				<!-- Logo -->
-					<div id="logo">
-						<h1><a href="index.html">SUNGMIN HIGHTECH</a></h1>
-					</div>
-
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li class="active"><a href="menu1.html">회사소개</a></li>
-							<li><a href="menu2.html">기기</a></li>
-							<li><a href="menu3.html">문의하기</a></li>
-							<li><a href="menu4.html">오시는길</a></li>
-						</ul>
-					</nav>
-
+			<!-- Logo -->
+			<div id="logo">
+				<h1><a href="index.html">SUNGMIN HIGHTECH</a></h1>
 			</div>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li class="active"><a href="menu1.html">회사소개</a></li>
+					<li><a href="menu2.html">기기</a></li>
+					<li><a href="menu3.html">문의하기</a></li>
+					<li><a href="menu4.html">오시는길</a></li>
+				</ul>
+			</nav>
+
 		</div>
+	</div>
 	<!-- Header -->
 
 	<!-- Banner -->
-		<div id="banner">
-			<div class="container">
-			</div>
+	<div id="banner">
+		<div class="container">
 		</div>
+	</div>
 	<!-- /Banner -->
 
-	<!-- Main -->
-		<div id="page">
+	<!-- Header -->
+	<div id="header">
+		<div class="container">
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li id="list1"><a href="?id=1">인사말</a></li>
+					<li id="list2"><a href="?id=2">회사 연혁</a></li>
+					<li id="list3"><a href="?id=3">조직도</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<!-- Header -->
 
-			<!-- Main -->
-			<div id="main" class="container">
-				<div class="row">
-					<div class="4u">
-						<img style="margin-left: 25%; margin-top: 25%;" src="images/pics04.jpg" alt="">
+	<!-- Main -->
+	<div id="page">
+		<!-- Main -->
+		<div class="container">
+			<div id="main1">
+			<div class="row">
+				<div class="4u">
+					<img style="margin-left: 25%; margin-top: 25%;" src="images/pics04.jpg" alt="">
+				</div>
+				<div class="8u">
+					<section>
+						<header>
+							<h2>인사말</h2>
+							<span class="byline">대표 권오식</span>
+						</header>
+						<p>성민하이텍은 지난 2002년 설립되어 "고객에게로 찾아가는 서비스 정신"을 모토로 고객 여러분 곁에서 최고의 상품과 최상의 서비스를 제공하기 위하여 최선의 노력을 하였습니다. </p>
+						<p>설립 초기부터 컬러와 관련된 산업분야에서 최첨단 "Total Color Solution"을 서비스하고 필요한 부분을 컨설팅과 국내 보급된 SYSTEM을 교육하여 최대한 활용할 수 있도록, 또는 그동안의 기술을 전수하여 새로운 장비를 기술제휴하여 만듦으로서 여러분 곁에 있을 수 있어 더없이 행복합니다. </p>
+						<p>1992년부터 시작한 전문 기술자인 성민하이텍이 여러분 곁에서 동반자로 시작하여 20여년동안 국내에 도입된 장비는 이루 말할 수 없으며 교육에서 시작하여 사후장비관리에 제가 미흡했던 점을 이제야 진심으로 고개숙여 죄송스러운 마음을 전합니다. </p>
+						<p>성민하이텍이라는 회사를 설립하여 새로운 마음으로 귀사에 컬러에서 부터 자동화 시스템을 통해 색상표준화 관리 효율적인 품질관리 등 기술개발의 표준화를 실현시켜 왔습니다. </p>
+						<p>폐사는 색채자동화의 컬러를 정면에서 접근, 컬러를 다루는 비결을 제시하여 고객의 만족과 경쟁력을 극대화 시킬 것을 약속드리며 성실과 신의로 최선을 다하겠습니다. 감사합니다.</p>
+					</section>
+				</div>
+			</div>
+		</div>
+
+		<div id="main2">
+			<!-- Timeline -->
+			<div class="timeline">
+				<div class="entries">
+					<div class="entry">
+						<div class="title">2002</div>
+						<div class="body">
+							<p>성민하이텍 설립</p>
+						</div>
 					</div>
-          <div class="8u">
-						<section>
-							<header>
-								<h2>인사말</h2>
-								<span class="byline">대표 권오식</span>
-							</header>
-							<p>성민하이텍은 지난 2002년 설립되어 "고객에게로 찾아가는 서비스 정신"을 모토로 고객 여러분 곁에서 최고의 상품과 최상의 서비스를 제공하기 위하여 최선의 노력을 하였습니다. </p>
-							<p>설립 초기부터 컬러와 관련된 산업분야에서 최첨단 "Total Color Solution"을 서비스하고 필요한 부분을 컨설팅과 국내 보급된 SYSTEM을 교육하여 최대한 활용할 수 있도록, 또는 그동안의 기술을 전수하여 새로운 장비를 기술제휴하여 만듦으로서 여러분 곁에 있을 수 있어 더없이 행복합니다. </p>
-							<p>1992년부터 시작한 전문 기술자인 성민하이텍이 여러분 곁에서 동반자로 시작하여 20여년동안 국내에 도입된 장비는 이루 말할 수 없으며 교육에서 시작하여 사후장비관리에 제가 미흡했던 점을 이제야 진심으로 고개숙여 죄송스러운 마음을 전합니다. </p>
-							<p>성민하이텍이라는 회사를 설립하여 새로운 마음으로 귀사에 컬러에서 부터 자동화 시스템을 통해 색상표준화 관리 효율적인 품질관리 등 기술개발의 표준화를 실현시켜 왔습니다. </p>
-							<p>폐사는 색채자동화의 컬러를 정면에서 접근, 컬러를 다루는 비결을 제시하여 고객의 만족과 경쟁력을 극대화 시킬 것을 약속드리며 성실과 신의로 최선을 다하겠습니다. 감사합니다.</p>
-						</section>
+					<div class="entry">
+						<div class="title">2003</div>
+						<div class="body">
+							<p>대만업체와 협정계약</p>
+						</div>
+					</div>
+					<div class="entry">
+						<div class="title big">2004</div>
+						<div class="body">
+							<p>㈜포산인더스트리 기술제공 협력업체 계약</p>
+							<p>서울사무소 파주로 확장이전</p>
+						</div>
+					</div>
+					<div class="entry">
+						<div class="title">2006</div>
+						<div class="body">
+							<p>양산확장이전 및 ccm프로그램개발</p>
+						</div>
+					</div>
+					<div class="entry">
+						<div class="title">2008</div>
+						<div class="body">
+							<p>현장용 조제반자동 장비 개발</p>
+						</div>
+					</div>
+					<div class="entry">
+						<div class="title big">2010</div>
+						<div class="body">
+							<p>중국업체와 기술제휴 및 장비개발착수</p>
+						</div>
+					</div>
+					<div class="entry">
+						<div class="title">2014</div>
+						<div class="body">
+							<p>부산으로 확장이전</p>
+						</div>
+					</div>
+					<div class="entry">
+						<div class="title">2017</div>
+						<div class="body">
+							<p>홍콩 칼라린스와 협정계약</p>
+						</div>
 					</div>
 				</div>
 			</div>
-			<!-- Main -->
+			<!-- Timeline -->
+		</div>
+
+		<div id="main3">
+			<p>조직도</p>
+		</div>
 
 		</div>
+		<!-- Main -->
+
+	</div>
 	<!-- /Main -->
 
 	<!-- /Footer -->
 	<div id="footers"></div>
 	<!-- /Footer -->
 
-	</body>
+</body>
+
 </html>
