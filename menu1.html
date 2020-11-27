@@ -26,6 +26,7 @@
 	<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 	<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 
+	<link rel="stylesheet" href="css/fonts.css" />
 	<script type="text/javascript">
 	function getParameterByName(name) {
 		name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
@@ -42,26 +43,42 @@
 				$("#main1").hide();
 				$("#main2").show();
 				$("#main3").hide();
+				$("#main4").hide();
 
 				$('#list1').removeClass('active');
 				$('#list2').addClass('active');
 				$('#list3').removeClass('active');
+				$('#list4').removeClass('active');
 			} else if(id==3){
 				$("#main1").hide();
 				$("#main2").hide();
 				$("#main3").show();
+				$("#main4").hide();
 
 				$('#list1').removeClass('active');
 				$('#list2').removeClass('active');
 				$('#list3').addClass('active');
+				$('#list4').removeClass('active');
+			}	else if(id==4){
+				$("#main1").hide();
+				$("#main2").hide();
+				$("#main3").hide();
+				$("#main4").show();
+
+				$('#list1').removeClass('active');
+				$('#list2').removeClass('active');
+				$('#list3').removeClass('active');
+				$('#list4').addClass('active');
 			}	else{
 				$("#main1").show();
 				$("#main2").hide();
 				$("#main3").hide();
+				$("#main4").hide();
 
 				$('#list1').addClass('active');
 				$('#list2').removeClass('active');
 				$('#list3').removeClass('active');
+				$('#list4').removeClass('active');
 			}
 
 		});
@@ -109,6 +126,7 @@
 					<li id="list1"><a href="?id=1">인사말</a></li>
 					<li id="list2"><a href="?id=2">회사 연혁</a></li>
 					<li id="list3"><a href="?id=3">조직도</a></li>
+					<li id="list4"><a href="?id=4">파트너사</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -121,10 +139,13 @@
 		<div class="container">
 			<div id="main1">
 			<div class="row">
-				<div class="4u">
-					<img style="margin-left: 25%; margin-top: 25%;" src="images/pics04.jpg" alt="">
+				<div class="1u">
+					<p></p>
 				</div>
-				<div class="8u">
+				<div class="4u">
+					<img style="margin-left: 25%; margin-top: 25%;" src="images/id_photo.png" alt="">
+				</div>
+				<div class="6u">
 					<section>
 						<header>
 							<h2>인사말</h2>
@@ -199,7 +220,11 @@
 		</div>
 
 		<div id="main3">
-			<p>조직도</p>
+			<img style="display: block; width: 50%; height: 50%; margin: 0 auto;" src="images/organization.png" alt="organization">
+		</div>
+
+		<div id="main4">
+			<p>파트너사</p>
 		</div>
 
 		</div>
