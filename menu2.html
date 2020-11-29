@@ -26,6 +26,7 @@
 	<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 
 	<link rel="stylesheet" href="css/fonts.css" />
+	<script type="text/javascript" src="text.json"></script>
 	<script type="text/javascript">
 		function getParameterByName(name) {
 			name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
@@ -38,41 +39,36 @@
 
 			var listID = getParameterByName('list');
 
-			if(listID==2){
-				$("#maintext").text("기계2");
-				$("#subtext").text("기계2 회사");
-				$("#contents").text("기계2 설명");
-			} else if(listID==3){
-				$("#maintext").text("기계3");
-				$("#subtext").text("기계3 회사");
-				$("#contents").text("기계3 설명");
-			} else if(listID==4){
-				$("#maintext").text("기계4");
-				$("#subtext").text("기계4 회사");
-				$("#contents").text("기계4 설명");
-			} else if(listID==5){
-				$("#maintext").text("기계5");
-				$("#subtext").text("기계5 회사");
-				$("#contents").text("기계5 설명");
-			} else if(listID==6){
-				$("#maintext").text("기계6");
-				$("#subtext").text("기계6 회사");
-				$("#contents").text("기계6 설명");
-			} else if(listID==7){
-				$("#maintext").text("기계7");
-				$("#subtext").text("기계7 회사");
-				$("#contents").text("기계7 설명");
-			} else if(listID==8){
-				$("#maintext").text("기계8");
-				$("#subtext").text("기계8 회사");
-				$("#contents").text("기계8 설명");
-			} else{
-				$("#maintext").text("CCK(Computer Color Kichen)");
-				$("#subtext").text("기계1 회사");
-				$("#contents").text("자동 피펫팅 장비");
-			}
+			$.getJSON('text.json', function(data) {
+				if (listID == "") {
+					listID = 1;
+				}
+
+				var title = data[listID - 1].title;
+				var subtitle = data[listID - 1].subtitle;
+				var imgsrc = data[listID - 1].imgsrc;
+				var detail = data[listID - 1].detail;
+
+				// p라는 태그안에 text값을 지정 후
+				// p의 html내용을 <br>태그로 replace 해준다.
+				var p = $(document.createElement("p")).text(detail);
+				p.html(p.html().replace(/\n/g, '<br/>'));
+
+				$("#maintext").text(title);
+				$("#subtext").text(subtitle);
+				$("#machineimg").attr("src", imgsrc);
+				$("#description").html(p);
+			});
 		});
 	</script>
+
+	<style>
+		img {
+			display: block;
+			width: 252px;
+			margin: 0 auto;
+		}
+	</style>
 </head>
 
 <body class="left-sidebar">
@@ -117,24 +113,33 @@
 				<div class="3u">
 					<section class="sidebar">
 						<header>
-							<h2>기계 1~4</h2>
+							<h2>분류 1</h2>
 						</header>
 						<ul class="style1">
-							<li><a href="?list=1">기계1</a></li>
-							<li><a href="?list=2">기계2</a></li>
-							<li><a href="?list=3">기계3</a></li>
-							<li><a href="?list=4">기계4</a></li>
+							<li><a href="?list=1">CCK(Computer Color Kichen)</a></li>
+							<li><a href="?list=2">SM-IR32S</a></li>
+							<li><a href="?list=3">SM-IR24S</a></li>
+							<li><a href="?list=4">CCM(Computer Color Matching system)</a></li>
 						</ul>
 					</section>
 					<section class="sidebar">
 						<header>
-							<h2>기계 5~8</h2>
+							<h2>분류 2</h2>
 						</header>
 						<ul class="style1">
-							<li><a href="?list=5">기계5</a></li>
-							<li><a href="?list=6">기계6</a></li>
-							<li><a href="?list=7">기계7</a></li>
-							<li><a href="?list=8">기계8</a></li>
+							<li><a href="?list=5">SPECTRALIGHT III</a></li>
+							<li><a href="?list=6">원형시편절단기</a></li>
+							<li><a href="?list=7">원단카트기</a></li>
+							<li><a href="?list=8">SM-LAB PIN TENTER</a></li>
+						</ul>
+					</section>
+					<section class="sidebar">
+						<header>
+							<h2>분류 3</h2>
+						</header>
+						<ul class="style1">
+							<li><a href="?list=9">SHUTTER MIXER</a></li>
+							<li><a href="?list=10">GYROSCOPIC MIXER</a></li>
 						</ul>
 					</section>
 				</div>
@@ -146,7 +151,15 @@
 							<span id="subtext" class="byline">subtitle</span>
 						</header>
 						<div id="contents">
-							content
+							<div class="row">
+								<div class="4u">
+									<img id="machineimg" src="images/machine01.png" alt="">
+								</div>
+								<div class="1u"></div>
+								<div id="description" class="8u">
+									content
+								</div>
+							</div>
 					</section>
 				</div>
 			</div>
