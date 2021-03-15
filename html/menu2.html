@@ -14,19 +14,19 @@
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:700italic,400,300,700' rel='stylesheet' type='text/css'>
 	<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script src="js/skel.min.js"></script>
-	<script src="js/skel-panels.min.js"></script>
-	<script src="js/init.js"></script>
+	<script src="../content/scripts/skel.min.js"></script>
+	<script src="../content/scripts/skel-panels.min.js"></script>
+	<script src="../content/scripts/init.js"></script>
 	<noscript>
-		<link rel="stylesheet" href="css/skel-noscript.css" />
-		<link rel="stylesheet" href="css/style.css" />
-		<link rel="stylesheet" href="css/style-desktop.css" />
+		<link rel="stylesheet" href="../content/styles/skel-noscript.css" />
+		<link rel="stylesheet" href="../content/styles/style.css" />
+		<link rel="stylesheet" href="../content/styles/style-desktop.css" />
 	</noscript>
 	<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 	<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 
-	<link rel="stylesheet" href="css/fonts.css" />
-	<script type="text/javascript" src="text.json"></script>
+	<link rel="stylesheet" href="../content/styles/fonts.css" />
+	<script type="text/javascript" src="../text.json"></script>
 	<script type="text/javascript">
 		function getParameterByName(name) {
 			name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
@@ -35,11 +35,11 @@
 			return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 		}
 		$(document).ready(function() {
-			$("#footers").load("common/footer.html");
+			$("#footers").load("../content/common/footer.html");
 
 			var listID = getParameterByName('list');
 
-			$.getJSON('text.json', function(data) {
+			$.getJSON('../text.json', function(data) {
 				if (listID == "") {
 					listID = 1;
 				}
@@ -153,7 +153,7 @@
 						<div id="contents">
 							<div class="row">
 								<div class="4u">
-									<img id="machineimg" src="images/machine01.png" alt="">
+									<img id="machineimg" src="../content/images/machine01.png" alt="">
 								</div>
 								<div class="1u"></div>
 								<div id="description" class="8u">
