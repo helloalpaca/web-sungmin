@@ -1,5 +1,25 @@
+
+@font-face {
+  font-family: KoPubDotum;
+  src: local(KoPubDotumMedium),
+       local(KoPubDotum),
+       url(../fonts/KoPubDotumMedium.eot?#iefix) format('embedded-opentype'),
+       url(../fonts/KoPubDotumMedium.woff) format('woff'),
+       url(../fonts/KoPubDotumMedium.ttf) format('truetype');
+  font-style: normal;
+  font-weight: normal;
+  unicode-range: U+0-10FFFF;
+}
+/*
+@font-face {
+  font-family: CookieRun;
+  src: url(../fonts/CookieRunRegular.ttf) format('truetype');
+  font-weight: regular;
+}
+*/
+
 body {
-  font-family: 'KoPub Dotum';
+  font-family: 'KoPubDotum', sans-serif;
   font-weight: normal;
 }
 

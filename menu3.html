@@ -49,69 +49,55 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$("#footers").load("content/common/footer.html");
+			$("#header").load("content/common/header.html");
 		});
+
+		function clicked(){
+			if(confirm("HELLO")== true){
+				$(myform).action = "dbTest.php";
+				document.form.submit();
+			} else{
+				return;
+			}
+		}
 	</script>
 
 </head>
 
 <body class="right-sidebar">
 
-	<!-- Header -->
-	<div id="header">
-		<div class="container">
-
-			<!-- Logo -->
-			<div id="logo">
-				<h1><a href="index.html">성민하이텍</a></h1>
-			</div>
-
-			<!-- Nav -->
-			<nav id="nav">
-				<ul>
-					<li><a href="menu1.html">회사소개</a></li>
-					<li><a href="menu2.html">기기</a></li>
-					<li class="active"><a href="menu3.html">문의하기</a></li>
-					<li><a href="menu4.html">오시는길</a></li>
-				</ul>
-			</nav>
-
-		</div>
-	</div>
-	<!-- Header -->
-
-	<!-- Banner -->
-	<div id="banner">
-		<div class="container">
-		</div>
-	</div>
-	<!-- /Banner -->
-
+	<!-- Header, Banner -->
+	<div id="header"></div>
+	<div id="banner"></div>
+	<!-- Header, Banner -->
+	
 	<!-- Main -->
 	<div id="page">
 
 		<!-- Main -->
 		<div id="main" class="container">
-			<form>
+			<form id="myform" method="post" target="iframe1" action="dbConnect.php">
 				<div class="form-group">
 					<label for="formGroupExampleInput">이름(Name)</label>
-					<input type="text" class="form-control" id="formGroupExampleInput">
+					<input type="text" class="form-control" name="name">
 				</div>
 				<div class="form-group">
 					<label for="formGroupExampleInput">연락처(phone number)</label>
-					<input type="text" class="form-control" id="formGroupExampleInput">
+					<input type="text" class="form-control" name="phone">
 				</div>
 				<div class="form-group">
 					<label for="formGroupExampleInput">이메일 주소(email address)</label>
-					<input type="text" class="form-control" id="formGroupExampleInput">
+					<input type="text" class="form-control" name="email">
 				</div>
 				<div class="form-group">
 					<label for="exampleFormControlTextarea1">궁금한 내용을 자유롭게 적어주세요.</label>
-					<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+					<textarea class="form-control" rows="3" name="qna"></textarea>
 				</div>
-				<button type="submit" class="btn btn-orange">Submit</button>
+				<input type="submit" class="btn btn-orange"></input>
 			</form>
 		</div>
 		<!-- Main -->
+		<iframe name="iframe1" style="display:none;"></iframe>
 
 	</div>
 	<!-- /Main -->
@@ -122,5 +108,12 @@
 
 
 </body>
+
+<script type="text/javascript">
+	window.onload=function() {
+    	//alert("로딩 완료");
+		$("#mn3").attr('class','active');
+	}
+</script>
 
 </html>

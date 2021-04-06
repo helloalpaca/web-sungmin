@@ -46,11 +46,12 @@
 		}
 		$(document).ready(function() {
 			$("#footers").load("content/common/footer.html");
+			$("#header").load("content/common/header.html");
 
 			var listID = getParameterByName('list');
 
 			$.getJSON('text.json', function(data) {
-				if (listID == "") {
+				if (listID == "") {s
 					listID = 1;
 				}
 
@@ -82,39 +83,13 @@
 </head>
 
 <body class="left-sidebar">
-
-	<!-- Header -->
-	<div id="header">
-		<div class="container">
-
-			<!-- Logo -->
-			<div id="logo">
-				<h1><a href="index.html">성민하이텍</a></h1>
-			</div>
-
-			<!-- Nav -->
-			<nav id="nav">
-				<ul>
-					<li><a href="menu1.html">회사소개</a></li>
-					<li class="active"><a href="menu2.html">기기</a></li>
-					<li><a href="menu3.html">문의하기</a></li>
-					<li><a href="menu4.html">오시는길</a></li>
-				</ul>
-			</nav>
-
-		</div>
-	</div>
-	<!-- Header -->
-
-	<!-- Banner -->
-	<div id="banner">
-		<div class="container">
-		</div>
-	</div>
-	<!-- /Banner -->
-
 	<!-- Main -->
 	<div id="page">
+
+		<!-- Header, Banner -->
+	<div id="header"></div>
+	<div id="banner"></div>
+	<!-- Header, Banner -->
 
 		<!-- Main -->
 		<div id="main" class="container">
@@ -122,34 +97,20 @@
 
 				<div class="3u">
 					<section class="sidebar">
-						<header>
+						<!--<header>
 							<h2>분류 1</h2>
-						</header>
+						</header>-->
 						<ul class="style1">
-							<li><a href="?list=1">CCK(Computer Color Kichen)</a></li>
-							<li><a href="?list=2">SM-IR32S</a></li>
-							<li><a href="?list=3">SM-IR24S</a></li>
+							<li><a href="?list=1">염색 실험실 CCK</a></li>
+							<li><a href="?list=2">SM-IR염색기S</a></li>
+							<li><a href="?list=3">SM-IR염색기M</a></li>
 							<li><a href="?list=4">CCM(Computer Color Matching system)</a></li>
-						</ul>
-					</section>
-					<section class="sidebar">
-						<header>
-							<h2>분류 2</h2>
-						</header>
-						<ul class="style1">
 							<li><a href="?list=5">SPECTRALIGHT III</a></li>
 							<li><a href="?list=6">원형시편절단기</a></li>
 							<li><a href="?list=7">원단카트기</a></li>
 							<li><a href="?list=8">SM-LAB PIN TENTER</a></li>
-						</ul>
-					</section>
-					<section class="sidebar">
-						<header>
-							<h2>분류 3</h2>
-						</header>
-						<ul class="style1">
-							<li><a href="?list=9">SHUTTER MIXER</a></li>
-							<li><a href="?list=10">GYROSCOPIC MIXER</a></li>
+							<li><a href="?list=9">페인트 믹서기</a></li>
+							<li><a href="?list=10">조색기</a></li>
 						</ul>
 					</section>
 				</div>
@@ -187,5 +148,11 @@
 
 
 </body>
+
+<script type="text/javascript">
+	window.onload=function() {
+		$("#mn2").attr('class','active');
+	}
+</script>
 
 </html>
