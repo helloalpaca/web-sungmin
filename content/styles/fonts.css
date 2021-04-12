@@ -10,13 +10,6 @@
   font-weight: normal;
   unicode-range: U+0-10FFFF;
 }
-/*
-@font-face {
-  font-family: CookieRun;
-  src: url(../fonts/CookieRunRegular.ttf) format('truetype');
-  font-weight: regular;
-}
-*/
 
 body {
   font-family: 'KoPubDotum', sans-serif;
