@@ -1,25 +1,66 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,700&display=swap');
+
 @font-face {
-  font-family: KoPubDotum;
-  src: local(KoPubDotumMedium),
-       local(KoPubDotum),
-       url(../fonts/KoPubDotumMedium.eot?#iefix) format('embedded-opentype'),
-       url(../fonts/KoPubDotumMedium.woff) format('woff'),
-       url(../fonts/KoPubDotumMedium.ttf) format('truetype');
+  font-family: 'KoPub Dotum';
+  font-weight: 300;
+  font-style: normal;
+  src: url('../fonts/KoPubDotumLight.eot');
+  src: url('../fonts/KoPubDotumLight.woff2') format('woff2'),
+       url('../fonts/KoPubDotumLight.woff') format('woff'),
+       url('../fonts/KoPubDotumLight.ttf') format('truetype'),
+       url('../fonts/KoPubDotumLight.svg#KoPubDotumLight') format('svg'),
+       url('../fonts/KoPubDotumLight.eot?#iefix') format('embedded-opentype');
+}
+
+@font-face {
+  font-family: 'KoPub Dotum';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../fonts/KoPubDotumMedium.eot');
+  src: url('../fonts/KoPubDotumMedium.woff2') format('woff2'),
+       url('../fonts/KoPubDotumMedium.woff') format('woff'),
+       url('../fonts/KoPubDotumMedium.ttf') format('truetype'),
+       url('../fonts/KoPubDotumMedium.svg#KoPubDotumMedium') format('svg'),
+       url('../fonts/KoPubDotumMedium.eot?#iefix') format('embedded-opentype');
+}
+
+@font-face {
+  font-family: 'KoPub Dotum';
+  font-weight: 600;
+  font-style: normal;
+  src: url('../fonts/KoPubDotumBold.eot');
+  src: url('../fonts/KoPubDotumBold.woff2') format('woff2'),
+       url('../fonts/KoPubDotumBold.woff') format('woff'),
+       url('../fonts/KoPubDotumBold.ttf') format('truetype'),
+       url('../fonts/KoPubDotumBold.svg#KoPubDotumBold') format('svg'),
+       url('../fonts/KoPubDotumBold.eot?#iefix') format('embedded-opentype');
+}
+
+@font-face {
+  font-family: CookieRun;
+  src: local(CookieRun Regular),
+       local(CookieRun),
+       url(../fonts/CookieRun-Regular.otf);
   font-style: normal;
   font-weight: normal;
   unicode-range: U+0-10FFFF;
 }
 
 body {
-  font-family: 'KoPubDotum', sans-serif;
-  font-weight: normal;
+  font-family: 'KoPub Dotum', sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 #logo {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'KoPub Dotum', sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }
 
 #copyright {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'KoPub Dotum', sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }
