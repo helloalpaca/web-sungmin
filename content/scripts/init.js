@@ -12,8 +12,8 @@ skel.init({
 		gutters: 50
 	},
 	breakpoints: {
-		'mobile': {
-			range: '-480',
+		'mobile': { 
+			range: '-1023',
 			lockViewport: true,
 			containers: 'fluid',
 			grid: {
@@ -22,12 +22,8 @@ skel.init({
 			}
 		},
 		'desktop': {
-			range: '481-',
+			range: '1024-',
 			containers: 1200
-		},
-		'1000px': {
-			range: '481-1200',
-			containers: 960
 		}
 	}
 }, {

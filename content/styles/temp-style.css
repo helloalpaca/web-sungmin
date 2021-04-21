@@ -1,0 +1,201 @@
+
+@charset 'UTF-8';
+
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+body {
+  background: #202020 url(images/img01.jpg) repeat;
+}
+
+body, input, textarea, select {
+  size: 11pt;
+  line-height: 1.75em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+strong, b {
+  font-weight: bold;
+  color: #000000;
+}
+
+em, i {
+  font-style: italic;
+}
+
+/* Buttons */
+.button {
+  position: relative;
+  display: inline-block;
+  margin-top: 0.5em;
+  text-align: center;
+  padding: 0.50em 1.5em;
+  background: #e95d3c;
+  border-radius: 6px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  color: #FFF;
+  -moz-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+  -webkit-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+  -o-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+  -ms-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+  transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #de3d27;
+  color: #FFF !important;
+}
+
+.btncontainer {
+  display: block;
+  text-align: center; 
+  margin: 0auto;
+}
+
+.btncontainer .btn {
+  display: inline-block;
+
+  padding: 0.50em 1.5em;
+  background: #e95d3c;
+  border-radius: 6px;
+  font-size: 1.1em;
+  color: #FFF;
+}
+
+.btncontainer .btn:hover {
+  background: #de3d27;
+  color: #FFF !important;
+}
+
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+#header {
+  position: relative;
+  background: #FFF;
+}
+
+#header .container {
+  position: relative;
+  padding: 4em 0em;
+}
+
+/*********************************************************************************/
+/* Logo                                                                          */
+/*********************************************************************************/
+#logo {
+  position: absolute;
+  left: 0em;
+  top: 3em;
+}
+
+#logo h1 {
+    font-weight: 600;
+}
+
+/*********************************************************************************/
+/* Nav                                                                           */
+/*********************************************************************************/
+#nav {
+  position: absolute;
+  right: 0em;
+  top: 2.2em;
+}
+
+#nav>ul>li {
+  float: left;
+  list-style:none;
+}
+
+#nav>ul>li:last-child {
+  padding-right: 0;
+}
+
+#nav>ul>li>a,
+#nav>ul>li>span {
+  display: block;
+  margin-left: 0.7em;
+  padding: 0.80em 1.2em;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  outline: 0;
+  color: #333;
+}
+
+/*********************************************************************************/
+/* Banner                                                                        */
+/*********************************************************************************/
+#banner {
+  position: relative;
+  padding: 12em 0em;
+  background: url(../images/banner.jpg) no-repeat center;
+  background-size: cover;
+  color: #fff;
+}
+
+/*********************************************************************************/
+/* Main                                                                          */
+/*********************************************************************************/
+#page {
+  position: relative;
+  background: #fff;
+}
+
+#main {
+  border-top: 1px solid;
+  border-color: rgba(0, 0, 0, .2);
+}
+
+.sidebar header h2 {
+  font-size: 1.6em;
+}
+
+/*********************************************************************************/
+/* Footer                                                                        */
+/*********************************************************************************/
+#footer {
+  position: relative;
+  color: rgba(255, 255, 255, .4);
+}
+
+#footer h2 {
+  padding-bottom: 1.5em;
+  font-size: 1.6em;
+  color: #FFF;
+}
+
+#footer strong {
+  color: rgba(255, 255, 255, .7);
+}
+
+/*********************************************************************************/
+/* Copyright                                                                     */
+/*********************************************************************************/
+#copyright {
+  position: relative;
+  padding: 3em 0em;
+  border-top: 1px solid #303030;
+  letter-spacing: 1px;
+  text-align: center;
+  color: rgba(255, 255, 255, .4);
+}
+
+#copyright a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, .4) !important;
+}

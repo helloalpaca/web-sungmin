@@ -254,6 +254,7 @@ ul.style5 a {}
   position: relative;
   display: inline-block;
   margin-top: 0.5em;
+  text-align: center;
   padding: 0.50em 1.5em;
   background: #e95d3c;
   border-radius: 6px;
@@ -270,6 +271,27 @@ ul.style5 a {}
 }
 
 .button:hover {
+  background: #de3d27;
+  color: #FFF !important;
+}
+
+.btncontainer {
+  display: block;
+  text-align: center; 
+  margin: 0auto;
+}
+
+.btncontainer .btn {
+  display: inline-block;
+
+  padding: 0.50em 1.5em;
+  background: #e95d3c;
+  border-radius: 6px;
+  font-size: 1.1em;
+  color: #FFF;
+}
+
+.btncontainer .btn:hover {
   background: #de3d27;
   color: #FFF !important;
 }
