@@ -148,12 +148,17 @@ em, i {
   color: #fff;
 }
 
+.homepage #banner {
+    padding: 12em 0em;
+} /* 210421 edit by helloalpaca */
+
 /*********************************************************************************/
 /* Main                                                                          */
 /*********************************************************************************/
 #page {
   position: relative;
   background: #fff;
+  padding: 2em 0em 6em 0em;
 }
 
 #main {
@@ -198,4 +203,21 @@ em, i {
 #copyright a {
   text-decoration: none;
   color: rgba(255, 255, 255, .4) !important;
+}
+
+/*********************************************************************************/
+/* Custom                                                                    */
+/*********************************************************************************/
+
+.col-md-3 h2 {
+    margin-top: 1.67em;
+    /* margin-bottom: 1.67em; */ /* 210422 edit by helloalpaca */ 
+    font-size: 1.6em;
+}
+
+img {
+    display: block;
+    height: 150px;
+    max-width: 252px;
+    margin: 0 auto;
 }
