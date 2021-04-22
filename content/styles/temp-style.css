@@ -1,4 +1,3 @@
-
 @charset 'UTF-8';
 
 /*********************************************************************************/
@@ -8,28 +7,43 @@ body {
   background: #202020 url(images/img01.jpg) repeat;
 }
 
-body, input, textarea, select {
+body,
+input,
+textarea,
+select {
   size: 11pt;
   line-height: 1.75em;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   letter-spacing: 1px;
   text-transform: uppercase;
   font-weight: 300;
 }
 
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
   color: inherit;
   text-decoration: none;
 }
 
-strong, b {
+strong,
+b {
   font-weight: bold;
   color: #000000;
 }
 
-em, i {
+em,
+i {
   font-style: italic;
 }
 
@@ -61,7 +75,7 @@ em, i {
 
 .btncontainer {
   display: block;
-  text-align: center; 
+  text-align: center;
   margin: 0auto;
 }
 
@@ -78,6 +92,28 @@ em, i {
 .btncontainer .btn:hover {
   background: #de3d27;
   color: #FFF !important;
+}
+
+/* Lists */
+ul.style1 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul.style1 li {
+  padding: 0.60em 0em;
+  border-top: 1px solid;
+  border-color: rgba(0, 0, 0, .1);
+}
+
+ul.style1 li:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+a {
+  color: #ff0000;
 }
 
 /*********************************************************************************/
@@ -103,7 +139,12 @@ em, i {
 }
 
 #logo h1 {
-    font-weight: 600;
+  font-weight: 600;
+}
+
+#logo a {
+  display: block;
+  text-decoration: none;
 }
 
 /*********************************************************************************/
@@ -117,7 +158,7 @@ em, i {
 
 #nav>ul>li {
   float: left;
-  list-style:none;
+  list-style: none;
 }
 
 #nav>ul>li:last-child {
@@ -137,6 +178,12 @@ em, i {
   color: #333;
 }
 
+#nav li.active a {
+  background: #e95d3c;
+  border-radius: 5px;
+  color: #FFF;
+}
+
 /*********************************************************************************/
 /* Banner                                                                        */
 /*********************************************************************************/
@@ -149,8 +196,10 @@ em, i {
 }
 
 .homepage #banner {
-    padding: 12em 0em;
-} /* 210421 edit by helloalpaca */
+  padding: 12em 0em;
+}
+
+/* 210421 edit by helloalpaca */
 
 /*********************************************************************************/
 /* Main                                                                          */
@@ -210,14 +259,21 @@ em, i {
 /*********************************************************************************/
 
 .col-md-3 h2 {
-    margin-top: 1.67em;
-    /* margin-bottom: 1.67em; */ /* 210422 edit by helloalpaca */ 
-    font-size: 1.6em;
+  margin-top: 1.67em;
+  /* margin-bottom: 1.67em; */
+  /* 210422 edit by helloalpaca */
+  font-size: 1.6em;
 }
 
-img {
-    display: block;
-    height: 150px;
-    max-width: 252px;
-    margin: 0 auto;
+.img-index {
+  display: block;
+  height: 150px;
+  max-width: 252px;
+  margin: 0 auto;
+}
+
+.img-menu2 {
+  display: block;
+  width: 252px;
+  margin: 0 auto;
 }
