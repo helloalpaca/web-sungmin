@@ -73,3 +73,29 @@ $(document).ready(function () {
         $('#list4').removeClass('active');
     }
 });
+
+/* menu2.html */
+$(document).ready(function () {
+    var listID = getParameterByName('list');
+
+    $.getJSON('text.json', function (data) {
+        if (listID == "") {
+            listID = 1;
+        }
+
+        var title = data[listID - 1].title;
+        var subtitle = data[listID - 1].subtitle;
+        var imgsrc = data[listID - 1].imgsrc;
+        var detail = data[listID - 1].detail;
+
+        // p라는 태그안에 text값을 지정 후
+        // p의 html내용을 <br>태그로 replace 해준다.
+        var p = $(document.createElement("p")).text(detail);
+        p.html(p.html().replace(/\n/g, '<br/>'));
+
+        $("#maintext").text(title);
+        $("#subtext").text(subtitle);
+        $("#machineimg").attr("src", imgsrc);
+        $("#description").html(p);
+    });
+});

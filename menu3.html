@@ -2,115 +2,72 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-	<title>성민하이텍 | 문의하기</title>
-	<meta name="title" content="성민하이텍 | 문의하기">
-	<meta name="description" content="SUNGMIN HITECH">
-	<meta name="keywords" content="성민하이텍, 성민, 하이텍, 권오식, CCK">
-	<meta name="author" content="helloalpaca">
-	<meta property="og:title" content="성민하이텍">
-	<meta property="og:type" content="website">
-	<meta property="og:image" content="">
-	<meta property="og:description" content="SUNGMIN HITECH">
-	<meta name="twitter:card" content="summary">
-	<meta name="twitter:title" content="성민하이텍">
-	<meta name="twitter:url" content="">
-	<meta name="twitter:image" content="">
-	<meta name="twitter:description" content="SUNGMIN HITECH">
-	<link rel="canonical" href="http://sungminhitech.com/menu3.html">
-	<meta name="robots" content="index, follow">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>성민하이텍 | 문의하기</title>
+    <meta name="title" content="성민하이텍 | 문의하기">
+    <meta name="description" content="SUNGMIN HITECH">
+    <meta name="keywords" content="성민하이텍, 성민, 하이텍, 권오식, CCK">
+    <meta name="author" content="helloalpaca">
+    <meta property="og:title" content="성민하이텍">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="SUNGMIN HITECH">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="성민하이텍">
+    <meta name="twitter:url" content="">
+    <meta name="twitter:image" content="">
+    <meta name="twitter:description" content="SUNGMIN HITECH">
+    <link rel="canonical" href="http://sungminhitech.com/menu3.html">
+    <meta name="robots" content="index, follow">
 
-	<link rel="icon" href="content/images/icon.png" type="image/png">
-	<link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="icon" href="content/images/icon.png" type="image/png">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    
+    <script src="content/scripts/jquery-3.5.1.min.js"></script>
+    <script src="content/scripts/common.js"></script>
 
-	<link rel="stylesheet" href="content/styles/bootstrap.css">
-	
-	<script src="content/scripts/jquery-3.5.1.min.js"></script>
-	<script src="content/scripts/skel.min.js"></script>
-	<script src="content/scripts/skel-panels.min.js"></script>
-	<script src="content/scripts/init.js"></script>
-
-	<link rel="stylesheet" href="content/styles/fonts.css" />
-
-	<style>
-		.btn-orange {
-			display: block;
-			margin: 0 auto;
-			color: #fff;
-			background-color: #e95d3c;
-		}
-	</style>
-
-	<script type="text/javascript">
-		$(document).ready(function () {
-			$("#footers").load("content/common/footer.html");
-			$("#header").load("content/common/header.html");
-		});
-
-		function clicked() {
-			if (confirm("HELLO") == true) {
-				$(myform).action = "dbTest.php";
-				document.form.submit();
-			} else {
-				return;
-			}
-		}
-	</script>
-
+    <link rel="stylesheet" href="content/styles/bootstrap.css">
+    <link rel="stylesheet" href="content/styles/fonts.css" />
+    <link rel="stylesheet" href="content/styles/style.css" />
 </head>
 
-<body class="right-sidebar">
+<body class="homepage">
+    <!-- Header, Banner -->
+    <div id="header"></div>
+    <div id="banner"></div>
+    <!-- Header, Banner -->
 
-	<!-- Header, Banner -->
-	<div id="header"></div>
-	<div id="banner"></div>
-	<!-- Header, Banner -->
+    <!-- Page -->
+    <div id="page">
+        <div class="container">
+            <form id="myform" method="post" target="iframe1" action="dbConnect.php">
+                <div class="form-group">
+                    <label for="formGroupExampleInput">이름(Name)</label>
+                    <input type="text" class="form-control" name="name">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput">연락처(phone number)</label>
+                    <input type="text" class="form-control" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput">이메일 주소(email address)</label>
+                    <input type="text" class="form-control" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">궁금한 내용을 자유롭게 적어주세요.</label>
+                    <textarea class="form-control" rows="3" name="qna"></textarea>
+                </div>
+                <input type="submit" class="btn btn-orange"></input>
+            </form>
+        </div>
+        <iframe name="iframe1" style="display:none;"></iframe>
+    </div><!-- End Page -->
 
-	<!-- Main -->
-	<div id="page">
-
-		<!-- Main -->
-		<div id="main" class="container">
-			<form id="myform" method="post" target="iframe1" action="dbConnect.php">
-				<div class="form-group">
-					<label for="formGroupExampleInput">이름(Name)</label>
-					<input type="text" class="form-control" name="name">
-				</div>
-				<div class="form-group">
-					<label for="formGroupExampleInput">연락처(phone number)</label>
-					<input type="text" class="form-control" name="phone">
-				</div>
-				<div class="form-group">
-					<label for="formGroupExampleInput">이메일 주소(email address)</label>
-					<input type="text" class="form-control" name="email">
-				</div>
-				<div class="form-group">
-					<label for="exampleFormControlTextarea1">궁금한 내용을 자유롭게 적어주세요.</label>
-					<textarea class="form-control" rows="3" name="qna"></textarea>
-				</div>
-				<input type="submit" class="btn btn-orange"></input>
-			</form>
-		</div>
-		<!-- Main -->
-		<iframe name="iframe1" style="display:none;"></iframe>
-
-	</div>
-	<!-- /Main -->
-
-	<!-- /Footer -->
-	<div id="footers"></div>
-	<!-- /Footer -->
-
-
+    <!-- /Footer -->
+    <div id="footers"></div>
+    <!-- /Footer -->
 </body>
-
-<script type="text/javascript">
-	window.onload=function() {
-    	//alert("로딩 완료.");
-		$("#mn3").attr('class','active');
-	}
-</script>
 
 </html>

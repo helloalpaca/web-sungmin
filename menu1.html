@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-	
+
 	<title>성민하이텍 | 회사소개</title>
 	<meta name="title" content="성민하이텍 | 회사소개">
 	<meta name="description" content="SUNGMIN HITECH">
@@ -26,76 +26,16 @@
 	<link rel="icon" href="content/images/icon.png" type="image/png">
 	<link rel="shortcut icon" href="" type="image/x-icon">
 
-	<link rel="stylesheet" href="content/styles/timeline.css" />
-	<link rel="stylesheet" href="content/styles/bootstrap.css">
-
 	<script src="content/scripts/jquery-3.5.1.min.js"></script>
-	<script src="content/scripts/skel.min.js"></script>
-	<script src="content/scripts/skel-panels.min.js"></script>
-	<script src="content/scripts/init.js"></script>
+	<script src="content/scripts/common.js"></script>
 
+	<link rel="stylesheet" href="content/styles/bootstrap.css">
 	<link rel="stylesheet" href="content/styles/fonts.css" />
-
-	<script type="text/javascript">
-		function getParameterByName(name) {
-			name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-			var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-				results = regex.exec(location.search);
-			return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-		}
-		$(document).ready(function () {
-			$("#footers").load("content/common/footer.html");
-			$("#header").load("content/common/header.html");
-
-			var id = getParameterByName('id');
-
-			if (id == 2) {
-				$("#main1").hide();
-				$("#main2").show();
-				$("#main3").hide();
-				$("#main4").hide();
-
-				$('#list1').removeClass('active');
-				$('#list2').addClass('active');
-				$('#list3').removeClass('active');
-				$('#list4').removeClass('active');
-			} else if (id == 3) {
-				$("#main1").hide();
-				$("#main2").hide();
-				$("#main3").show();
-				$("#main4").hide();
-
-				$('#list1').removeClass('active');
-				$('#list2').removeClass('active');
-				$('#list3').addClass('active');
-				$('#list4').removeClass('active');
-			} else if (id == 4) {
-				$("#main1").hide();
-				$("#main2").hide();
-				$("#main3").hide();
-				$("#main4").show();
-
-				$('#list1').removeClass('active');
-				$('#list2').removeClass('active');
-				$('#list3').removeClass('active');
-				$('#list4').addClass('active');
-			} else {
-				$("#main1").show();
-				$("#main2").hide();
-				$("#main3").hide();
-				$("#main4").hide();
-
-				$('#list1').addClass('active');
-				$('#list2').removeClass('active');
-				$('#list3').removeClass('active');
-				$('#list4').removeClass('active');
-			}
-		});
-	</script>
+	<link rel="stylesheet" href="content/styles/style.css" />
+	<link rel="stylesheet" href="content/styles/timeline.css" />
 </head>
 
 <body class="homepage">
-
 	<!-- Header, Banner -->
 	<div id="header"></div>
 	<div id="banner"></div>
@@ -123,19 +63,18 @@
 		<div class="container">
 			<div id="main1">
 				<div class="row">
-					<div class="1u">
+					<div class="col-md-1">
 						<p></p>
 					</div>
-					<div class="3u">
+					<div class="col-md-3">
 						<img style="margin-left: 25%; margin-top: 25%;" src="content/images/id_photo.png" alt="">
 						<br>
 						<span class="byline" style="display: block; text-align: center;">대표 권오식</span>
 					</div>
-					<div class="7u">
+					<div class="col-md-7">
 						<section>
 							<header>
-								<h2>안녕하십니까?</h2><br>
-								<h2>성민하이텍입니다.</h2>
+								<h2>안녕하십니까?<br>성민하이텍입니다.</h2>
 							</header>
 							<p>1992년부터 전문 기술자로 시작한 성민하이텍은 색채자동화 컬러와 관련된 산업분야에서 최첨단 "Total Color Solution"을 교육에서 시작하여
 								사후장비관리까지 서비스하고 있는
@@ -166,15 +105,6 @@
 								<p>대만업체와 협정계약</p>
 							</div>
 						</div>
-						<!--
-					<div class="entry">
-						<div class="title big">2004</div>
-						<div class="body">
-							<p>㈜포산인더스트리 기술제공 협력업체 계약</p>
-							<p>서울사무소 파주로 확장이전</p>
-						</div>
-					</div>
-				-->
 						<div class="entry">
 							<div class="title">2006</div>
 							<div class="body">
@@ -228,13 +158,6 @@
 	<!-- /Footer -->
 	<div id="footers"></div>
 	<!-- /Footer -->
-
 </body>
-
-<script type="text/javascript">
-	window.onload = function () {
-		$("#mn1").attr('class', 'active');
-	}
-</script>
 
 </html>

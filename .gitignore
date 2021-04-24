@@ -2,7 +2,9 @@
 .git
 .DS_Store
 /images/.DS_Store
+
 new.html
 account.ini
-footerTest.html
+
 /content/fonts
+/legacy
