@@ -5,6 +5,22 @@ function getParameterByName(name) {
     return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
+function initMap() {
+    var company = {
+        lat: 35.14110284784037,
+        lng: 128.94609152636053
+    };
+    var map = new google.maps.Map(
+        document.getElementById('map'), {
+            zoom: 12,
+            center: company
+        });
+    new google.maps.Marker({
+        position: company,
+        map: map
+    });
+}
+
 /* common */
 $(document).ready(function () {
     $("#footers").load("content/common/footer.html");

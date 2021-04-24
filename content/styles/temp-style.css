@@ -277,3 +277,10 @@ a {
   width: 252px;
   margin: 0 auto;
 }
+
+.btn-orange {
+  display: block;
+  margin: 0 auto;
+  color: #fff;
+  background-color: #e95d3c;
+}
