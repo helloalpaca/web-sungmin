@@ -184,6 +184,25 @@ a {
   color: #FFF;
 }
 
+@media all and (max-width:767.98px) {
+
+  .container #logo {/*
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    */
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  #nav {
+    position: relative;
+    display: inline-block;
+  }
+}
+
 /*********************************************************************************/
 /* Banner                                                                        */
 /*********************************************************************************/
@@ -267,8 +286,9 @@ a {
 
 .img-index {
   display: block;
-  height: 150px;
-  max-width: 252px;
+  max-width: 100%;
+  max-height: 150px;
+  height: auto;
   margin: 0 auto;
 }
 
