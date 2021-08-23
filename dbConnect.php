@@ -1,4 +1,5 @@
 <?php
+    header("Content-Type:text/html;charset=utf-8");
     date_default_timezone_set('Asia/Seoul');
     
     $ini_array = parse_ini_file("account.ini", true);
@@ -33,4 +34,5 @@
     echo '<script language="javascript">';
     echo 'alert("문의 접수가 완료되었습니다.")';
     echo '</script>';
+    echo "<script>window.location = 'http://sungminhitech.com/menu3.html?result=success'</script>";
 ?>

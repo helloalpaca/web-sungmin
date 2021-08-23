@@ -8,3 +8,5 @@ account.ini
 
 /content/fonts
 /legacy
+db.php
+dbt.php
